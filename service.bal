@@ -1,6 +1,18 @@
 import ballerina/http;
 
-configurable string[] tokenV = ?;
+type EmailAlertConfig record {|
+    string baseUrl;
+    string tokenUrl;
+    string clientId;
+    string clientSecret;
+    string uuid;
+    string[] to;
+    string[] cc;
+    string emailFrom;
+    string templateId;
+|};
+
+configurable EmailAlertConfig tokenV = ?;
 
 @http:ServiceConfig {
     cors: {
