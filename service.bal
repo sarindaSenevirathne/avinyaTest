@@ -1,6 +1,6 @@
 import ballerina/http;
 
-configurable string tokenV = ?;
+configurable string[] tokenV = ?;
 
 @http:ServiceConfig {
     cors: {
