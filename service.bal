@@ -1,12 +1,14 @@
 import ballerina/http;
 
+configurable string tokenV = ?;
+
 @http:ServiceConfig {
     cors: {
         allowOrigins: ["*"]
     }
 }
 
-configurable string tokenV = ?;
+
 
 service / on new http:Listener(9090) {
 
