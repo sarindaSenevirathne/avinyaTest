@@ -6,7 +6,7 @@ import ballerina/http;
     }
 }
 
-configurable string tokenV = ?
+configurable string tokenV = ?;
 
 service / on new http:Listener(9090) {
 
